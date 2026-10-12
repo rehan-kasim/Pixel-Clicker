@@ -1,8 +1,5 @@
-const p = document.getElementById("p");
-const age = document.getElementById("age");
-const btn = document.getElementById("btn");
+let number = "123-456-7890";
+c
 
-btn.onclick = function(){
-    let usr_age = age.textContent
-    console.log(usr_age)
-}
+number = Number(number);
+console.log(number);
