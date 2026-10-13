@@ -3,10 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clicker Game</title>
+    <title>Document</title>
     <link rel="stylesheet" href="output.css">
 </head>
-<body>
-    <script src="index.js"></script>
+<body class="bg-amber-100">
+    <div class="flex h-screen">
+        <aside class="flex flex-col border-r-2 border-amber-900" id="sidebar-l">
+            <a href="/src/index.html">
+                <h1 class="m-4 -rotate-6 text-4xl font-bold leading-none text-yellow-300  [-webkit-text-stroke:6px_#5a2d0c] [paint-order:stroke_fill]">
+                    Pixel<br>Clicker
+                </h1>
+            </a>
+            <div class="border-1 border-amber-950 m-2.5 mt-10 bg-white shadow-2xs shadow-black">
+                <p class="font-bold opacity-20 text-xs ml-1.5">PER CLICK</p>
+                <p id="pixelperclick" class="font-extrabold text-xl ml-1.5 text-amber-700">1</p>
+            </div>
+            <div class="border-1 border-amber-950 m-2.5 bg-white shadow-2xs shadow-black">
+                <p class="font-bold ml-1.5 opacity-20 text-xs">PER SECOND</p>
+                <p id="pixelpersecond" class="font-extrabold ml-1.5 text-xl  text-amber-700">0</p>
+            </div>
+            <div class="border-1 border-amber-950 m-2.5 mt-auto bg-orange-300 shadow-2xs shadow-black">
+                <p class="m-1 font-bold text-sm">Made With ❤️<br> By 
+                    <a class="underline" href="https://rehan-kasim.github.io/PortFolio/src/">Rehan kasim</a><br>
+                    <a class="underline" href="https://github.com/rehan-kasim/Pixel-Clicker">Source Code</a>
+                </p>
+            </div>
+        </aside>
+        <main id="game"></main>
+        <aside id="sidebar-r"></aside>
+    </div>
 </body>
 </html>

@@ -1,5 +1,6 @@
-let number = "123-456-7890";
-c
+function combine(...strings){
+    return strings.join(" ");
+}
 
-number = Number(number);
-console.log(number);
+let string = combine("Mr","SpongeBob")
+console.log(string)
