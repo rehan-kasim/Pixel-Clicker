@@ -11,16 +11,16 @@
         <aside class="flex flex-col border-r-2 border-amber-900" id="sidebar-l">
             <a href="/src/index.html">
                 <h1 class="m-4 -rotate-6 text-4xl font-bold leading-none text-yellow-300  [-webkit-text-stroke:6px_#5a2d0c] [paint-order:stroke_fill]">
-                    Pixel<br>Clicker
+                    Coffee<br>Clicker
                 </h1>
             </a>
-            <div class="border-1 border-amber-950 m-2.5 mt-10 bg-white shadow-2xs shadow-black">
+            <div class="border-1 border-amber-950 m-2.5 mt-10 bg-white shadow-2xs shadow-black h-13">
                 <p class="font-bold opacity-20 text-xs ml-1.5">PER CLICK</p>
-                <p id="pixelperclick" class="font-extrabold text-xl ml-1.5 text-amber-700">1</p>
+                <p id="pixelperclick" class="font-extrabold text-xl ml-1.5 text-amber-700">1 ☕</p>
             </div>
-            <div class="border-1 border-amber-950 m-2.5 bg-white shadow-2xs shadow-black">
+            <div class="border-1 border-amber-950 m-2.5 bg-white shadow-2xs shadow-black h-13">
                 <p class="font-bold ml-1.5 opacity-20 text-xs">PER SECOND</p>
-                <p id="pixelpersecond" class="font-extrabold ml-1.5 text-xl  text-amber-700">0</p>
+                <p id="pixelpersecond" class="font-extrabold ml-1.5 text-xl  text-amber-700">0 ☕</p>
             </div>
             <div class="border-1 border-amber-950 m-2.5 mt-auto bg-orange-300 shadow-2xs shadow-black">
                 <p class="m-1 font-bold text-sm">Made With ❤️<br> By 
@@ -29,7 +29,12 @@
                 </p>
             </div>
         </aside>
-        <main id="game"></main>
+        <main class="flex flex-row" id="game">
+            <p>Click, Upgrade, Click</p>
+            <button class="cursor-pointer" id="clicker">
+                <img src="./assets/coffee.png" width="350"">
+            </button>
+        </main>
         <aside id="sidebar-r"></aside>
     </div>
 </body>
