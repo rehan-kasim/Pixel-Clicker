@@ -16,11 +16,11 @@
             </a>
             <div class="border-1 border-amber-950 m-2.5 mt-10 bg-white shadow-2xs shadow-black h-13">
                 <p class="font-bold opacity-20 text-xs ml-1.5">PER CLICK</p>
-                <p id="pixelperclick" class="font-extrabold text-xl ml-1.5 text-amber-700">1 ☕</p>
+                <p id="pixelperclick" class="font-extrabold text-xl ml-1.5 text-amber-950">1 ☕</p>
             </div>
             <div class="border-1 border-amber-950 m-2.5 bg-white shadow-2xs shadow-black h-13">
                 <p class="font-bold ml-1.5 opacity-20 text-xs">PER SECOND</p>
-                <p id="pixelpersecond" class="font-extrabold ml-1.5 text-xl  text-amber-700">0 ☕</p>
+                <p id="pixelpersecond" class="font-extrabold ml-1.5 text-xl  text-amber-950">0 ☕</p>
             </div>
             <div class="border-1 border-amber-950 m-2.5 mt-auto bg-orange-300 shadow-2xs shadow-black">
                 <p class="m-1 font-bold text-sm">Made With ❤️<br> By 
@@ -29,13 +29,25 @@
                 </p>
             </div>
         </aside>
-        <main class="flex flex-row" id="game">
-            <p>Click, Upgrade, Click</p>
-            <button class="cursor-pointer" id="clicker">
-                <img src="./assets/coffee.png" width="350"">
-            </button>
+        <main class="flex flex-1 flex-col items-center gap-4 pt-8" id="game">
+            <p class="font-bold px-10 py-3 rounded-full text-xl border-amber-200 border-2 bg-amber-800 text-amber-200">
+                Click, <button class="cursor-pointer" onclick="window.alert('Upgrade from the right panel broke (this is an easter egg)')">Upgrade</button>, Click
+            </p>
+            <p class="mt-10">
+                <span id="coffee-amount" class="text-3xl font-extrabold text-amber-950">
+                    1 ☕
+                </span>
+            </p>
+            <div class="relative">
+                <div class="absolute rays -inset-5"></div>
+                <button class="cursor-pointer transition-transform hover:scale-105 active:scale-98" id="clicker">
+                    <img src="./assets/coffee.png" width="350" class="animate-wiggle" alt="Coffee cup">
+                </button>
+            </div>
         </main>
-        <aside id="sidebar-r"></aside>
+        <aside id="sidebar-r">
+            
+        </aside>
     </div>
 </body>
 </html>

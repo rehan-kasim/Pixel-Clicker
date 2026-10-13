@@ -1,1 +1,23 @@
 @import "tailwindcss";
+
+@keyframes wiggle {
+    0%, 100% {transform: rotate(-3deg);}
+    50% {transform: rotate(6deg);}
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@theme {
+    --animate-wiggle: wiggle 3s ease-in-out infinite;
+}
+
+.rays {
+  background: repeating-conic-gradient(
+    rgba(250, 204, 21, 0.3) 0deg 10deg,
+    transparent 10deg 20deg
+  );
+  animation: spin 30s linear infinite;
+  border-radius: 50%;
+}
