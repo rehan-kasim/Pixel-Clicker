@@ -13,6 +13,11 @@
     --animate-wiggle: wiggle 3s ease-in-out infinite;
 }
 
+@keyframes float-up {
+  from { opacity: 1; transform: translate(-50%, 0); }
+  to   { opacity: 0; transform: translate(-50%, -80px); }
+}
+
 .rays {
   background: repeating-conic-gradient(
     rgba(250, 204, 21, 0.3) 0deg 10deg,
@@ -20,4 +25,14 @@
   );
   animation: spin 30s linear infinite;
   border-radius: 50%;
+}
+
+.float-text {
+  position: fixed;
+  pointer-events: none;
+  user-select: none;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #5a2d0c;
+  animation: float-up 0.8s ease-out forwards;
 }

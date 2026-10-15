@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Coffee Clicker</title>
     <link rel="stylesheet" href="output.css">
 </head>
 <body class="bg-amber-100">
@@ -30,8 +30,8 @@
             </div>
         </aside>
         <main class="flex flex-1 flex-col items-center gap-4 pt-8" id="game">
-            <p class="font-bold px-10 py-3 rounded-full text-xl border-amber-200 border-2 bg-amber-800 text-amber-200">
-                Click, <button class="cursor-pointer" onclick="window.alert('Upgrade from the right panel broke (this is an easter egg)')">Upgrade</button>, Click
+            <p class="-rotate-3 font-bold px-10 py-3 rounded-full text-xl border-amber-200 border-2 bg-amber-800 text-amber-200">
+                Click, <button class="cursor-pointer" onclick="window.alert('I cant think Of easter egg btw i am pro at minecraft')">Upgrade</button>, Click
             </p>
             <p class="mt-10">
                 <span id="coffee-amount" class="text-3xl font-extrabold text-amber-950">
@@ -45,7 +45,48 @@
                 </button>
             </div>
         </main>
-        <aside id="sidebar-r">
+        <aside id="sidebar-r" class="flex flex-col border-l-2 border-amber-900 w-[150px]">
+            <div class="flex flex-col gap-4 p-2">
+                <h2 class="text-xl font-bold text-amber-950 -rotate-6">Upgrades</h2>
+                <div id="upgrades" class="flex flex-col gap-4">
+                    <button id="1clk" class="cursor-pointer flex h-24 flex-col items-start justify-center border-1 border-amber-950 bg-white shadow-2xs shadow-black">
+                        <div class="flex flex-col items-center pt-1.5 pl-[6px] gap-0">
+                            <p class="text-xs font-bold leading-[12px] opacity-20">PER CLICK</p>
+                            <p class="flex items-center gap-1 text-xl font-extrabold leading-[20px] text-amber-950">
+                                +1 ☕
+                            </p>
+                        </div>
+                        <p class="mt-2 w-14 ml-1.5 rounded-full border-2 bg-amber-600 pl-1 text-sm">10 ☕</p>
+                    </button>
+                    <button id="5clk" class="cursor-pointer flex h-24 flex-col items-start justify-center border-1 border-amber-950 bg-white shadow-2xs shadow-black">
+                        <div class="flex flex-col items-center pt-1.5 pl-[6px] gap-0">
+                            <p class="text-xs font-bold leading-[12px] opacity-20">PER CLICK</p>
+                            <p class="flex items-center gap-1 text-xl font-extrabold leading-[20px] text-amber-950">
+                                +5 ☕
+                            </p>
+                        </div>
+                        <p class="mt-2 w-14 ml-1.5 rounded-full border-2 bg-amber-600 pl-1 text-sm">50 ☕</p>
+                    </button>
+                    <button id="50clk-sec" class="cursor-pointer flex h-24 flex-col items-start justify-center border-1 border-amber-950 bg-white shadow-2xs shadow-black">
+                        <div class="flex flex-col items-center pt-1.5 pl-[6px] gap-0">
+                            <p class="text-xs font-bold leading-[12px] opacity-20">PER SECOND</p>
+                            <p class="flex items-center gap-1 text-xl font-extrabold leading-[20px] text-amber-950">
+                                +50 ☕
+                            </p>
+                        </div>
+                        <p class="mt-2 w-20 ml-1.5 rounded-full border-2 bg-amber-600 pl-1 text-sm">1000 ☕</p>
+                    </button>
+                    <button id="1000clk-sec" class="cursor-pointer flex h-24 flex-col items-start justify-center border-1 border-amber-950 bg-white shadow-2xs shadow-black">
+                        <div class="flex flex-col items-center pt-1.5 pl-[6px] gap-0">
+                            <p class="text-xs font-bold leading-[12px] opacity-20">PER SECOND</p>
+                            <p class="flex items-center gap-1 text-xl font-extrabold leading-[20px] text-amber-950">
+                                +1000 ☕
+                            </p>
+                        </div>
+                        <p class="mt-2 w-22 ml-1.5 rounded-full border-2 bg-amber-600 pl-1 text-sm">100000 ☕</p>
+                    </button>
+                </div>
+            </div>
         </aside>
     </div>
 <script src="index.js"></script>
