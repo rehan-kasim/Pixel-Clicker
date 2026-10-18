@@ -36,3 +36,9 @@
   color: #5a2d0c;
   animation: float-up 0.8s ease-out forwards;
 }
+
+@media (prefers-color-scheme: dark) {
+  .float-text {
+    color: #fde68a;
+  }
+}
