@@ -6,10 +6,30 @@ const upgradeClick1 = document.getElementById("1clk");
 const upgradeClick5 = document.getElementById("5clk");
 const upgradeSec100 = document.getElementById("50clk-sec");
 const upgradeSec1000 = document.getElementById("1000clk-sec");
+const upgradeClick50 = document.getElementById("50clk");
+const originalTitle = document.title;
+const egg = document.getElementById("estregg1");
 
 let coffee = 0;
+let clicks = 0;
 let perClick = 1;
 let perSecond = 0;
+
+egg.onclick = function (){
+    window.alert('You clicked On A forbiden Place Now You Must Face the Consequences removing everything you have!! Haha ')
+    coffee = 0;
+    clicks = 0;
+    perClick = 1;
+    perSecond = 0;
+}
+
+document.addEventListener("visibilitychange", function () {
+    if (document.hidden) {
+        document.title = "Come Back Coffee is Getting Cold";
+        return;
+    }
+    document.title = originalTitle;
+});
 
 function save() {
     const data = { coffee, perClick, perSecond };
@@ -84,6 +104,9 @@ upgradeClick1.onclick = function () {
 upgradeClick5.onclick = function () {
     upgradebuy(50, 5, 0);
 };
+upgradeClick50.onclick = function () {
+    upgradebuy(1000, 50, 0);
+};
 upgradeSec100.onclick = function () {
     upgradebuy(1000, 0, 50);
 };
@@ -92,8 +115,20 @@ upgradeSec1000.onclick = function () {
 };
 
 clicker.onclick = function (e) {
+    if (e.detail === 0) return;
+    else {
+        alert(`Use Mouse CaffineHolic!!!!`)
+    }
     coffee += perClick;
+    clicks = clicks + 1;
     showFloat(e);
+    if (coffee == 404){
+    alert(`404 Coffee Not Found This is Just a easter egg`);
+    };
+    if (coffee >= 100000000) {
+        alert("You have reached the maximum amount of coffee! You can continue to click, but your coffee will not increase.");
+        coffee = 100000000;
+    }
     save();
     render();
 };
