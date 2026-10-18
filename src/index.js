@@ -124,6 +124,10 @@ upgradeSec1000.onclick = function () {
     upgradebuy(100000, 0, 1000);
 };
 
+clicker.addEventListener("contextmenu", function (e) {
+    e.preventDefault();
+});
+
 clicker.onclick = function (e) {
     if (blockKeyboard(e)) return;
     coffee += perClick;
