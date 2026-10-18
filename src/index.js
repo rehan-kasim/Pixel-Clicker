@@ -116,8 +116,8 @@ upgradeSec1000.onclick = function () {
 
 clicker.onclick = function (e) {
     if (e.detail === 0) return;
-    else {
-        alert(`Use Mouse CaffineHolic!!!!`)
+    else if (e.detail !== 0){
+        alert(`Use Mouse Caffineholic friend`)
     }
     coffee += perClick;
     clicks = clicks + 1;
@@ -126,7 +126,7 @@ clicker.onclick = function (e) {
     alert(`404 Coffee Not Found This is Just a easter egg`);
     };
     if (coffee >= 100000000) {
-        alert("You have reached the maximum amount of coffee! You can continue to click, but your coffee will not increase.");
+        alert("You have reached the maximum amount of coffee! You can continue to click, but your coffee will not increase.And NOw As A reward You Get Admin Dash Which Is NOT completed :)");
         coffee = 100000000;
     }
     save();
