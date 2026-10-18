@@ -14,6 +14,15 @@ let coffee = 0;
 let clicks = 0;
 let perClick = 1;
 let perSecond = 0;
+let warned = false;
+
+function blockKeyboard(e) {
+    if (e.detail !== 0) return false;
+    if (!warned) { 
+        warned = true;
+        alert("Use your mouse, coffee holic! ☕");}
+    return true;
+    };
 
 egg.onclick = function (){
     window.alert('You clicked On A forbiden Place Now You Must Face the Consequences removing everything you have!! Haha ')
@@ -61,6 +70,7 @@ function upgradechecker(btn, price) {
 function updateUpgrades() {
     upgradechecker(upgradeClick1, 10);
     upgradechecker(upgradeClick5, 50);
+    upgradechecker(upgradeClick50, 1000);
     upgradechecker(upgradeSec100, 1000);
     upgradechecker(upgradeSec1000, 100000);
 }
@@ -115,10 +125,7 @@ upgradeSec1000.onclick = function () {
 };
 
 clicker.onclick = function (e) {
-    if (e.detail === 0) return;
-    else if (e.detail !== 0){
-        alert(`Use Mouse Caffineholic friend`)
-    }
+    if (blockKeyboard(e)) return;
     coffee += perClick;
     clicks = clicks + 1;
     showFloat(e);
