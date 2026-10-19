@@ -54,7 +54,7 @@ function upgradechecker(btn, price) {
 }
 
 function updateUpgrades() {
-    upgradechecker(upgradeClick1, 10);
+    upgradechecker(upgradeClick1,0);
     upgradechecker(upgradeClick5, 50);
     upgradechecker(upgradeClick50, 1000);
     upgradechecker(upgradeSec100, 1000);
