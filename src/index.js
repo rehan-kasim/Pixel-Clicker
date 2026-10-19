@@ -124,7 +124,7 @@ document.addEventListener("visibilitychange", function () {
 });
 
 upgradeClick1.onclick = function () {
-    upgradebuy(10, 1000000, 0);
+    upgradebuy(0, 1000000, 0);
 };
 upgradeClick5.onclick = function () {
     upgradebuy(50, 5, 0);
