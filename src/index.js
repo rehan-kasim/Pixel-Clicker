@@ -15,6 +15,7 @@ let clicks = 0;
 let perClick = 1;
 let perSecond = 0;
 let warned = false;
+let intro = false;
 
 function blockKeyboard(e) {
     if (e.detail !== 0) return false;
@@ -24,24 +25,8 @@ function blockKeyboard(e) {
     return true;
     };
 
-egg.onclick = function (){
-    window.alert('You clicked On A forbiden Place Now You Must Face the Consequences removing everything you have!! Haha ')
-    coffee = 0;
-    clicks = 0;
-    perClick = 1;
-    perSecond = 0;
-}
-
-document.addEventListener("visibilitychange", function () {
-    if (document.hidden) {
-        document.title = "Come Back Coffee is Getting Cold";
-        return;
-    }
-    document.title = originalTitle;
-});
-
 function save() {
-    const data = { coffee, perClick, perSecond };
+    const data = { coffee, perClick, perSecond, intro};
     localStorage.setItem("CoffeeData", JSON.stringify(data));
 }
 
@@ -53,6 +38,7 @@ function load() {
     coffee = data.coffee ?? 0;
     perClick = data.perClick ?? 1;
     perSecond = data.perSecond ?? 0;
+    intro = data.intro ?? false;
 }
 
 function upgradechecker(btn, price) {
@@ -89,7 +75,7 @@ function showFloat(e) {
 function render() {
     coffeePerClick.textContent = perClick + " ☕";
     coffeePerSecond.textContent = perSecond + " ☕";
-    coffeeAmount.textContent = coffee + " ☕";
+    coffeeAmount.textContent = formatNumber(coffee) + " ☕";
     updateUpgrades();
 }
 
@@ -107,6 +93,35 @@ function upgradebuy(price, clkpercoffee, clkpersec) {
         render();
     };
 }
+
+function cut(x) {
+    return Math.floor(x * 100) /100;
+}
+
+function formatNumber(n) {
+     if (n >= 1e15) return cut(n / 1e15) + "Qa";
+     if (n >= 1e12) return cut(n / 1e12) + "T";
+     if (n >= 1e9) return cut(n / 1e9) + "B";
+     if (n >= 1e6) return cut(n / 1e6) + "M";
+     if (n >= 1e3) return cut(n / 1e3) + "K";
+     return Math.floor(n);
+}
+
+egg.onclick = function (){
+    window.alert('You clicked On A forbiden Place Now You Must Face the Consequences removing everything you have!! Haha ngl but this is a function i used to test the game and i thought it would be funny to add it in the game so enjoy this easter egg');
+    coffee = 0;
+    clicks = 0;
+    perClick = 1;
+    perSecond = 0;
+}
+
+document.addEventListener("visibilitychange", function () {
+    if (document.hidden) {
+        document.title = "Come Back Coffee is Getting Cold";
+        return;
+    }
+    document.title = originalTitle;
+});
 
 upgradeClick1.onclick = function () {
     upgradebuy(10, 1, 0);
@@ -137,12 +152,15 @@ clicker.onclick = function (e) {
     alert(`404 Coffee Not Found This is Just a easter egg`);
     };
     if (coffee >= 100000000) {
-        alert("You have reached the maximum amount of coffee! You can continue to click, but your coffee will not increase.And NOw As A reward You Get Admin Dash Which Is NOT completed :)");
+        alert("You Won! And Now As A reward You Get Admin Dash Which Is NOT completed :)");
         coffee = 100000000;
     }
     save();
     render();
 };
+
+console.log("Coffee Clicker Loaded");
+console.log("Hello Developer! If you are reading this, you are probably trying to cheat the game. :)");
 
 load();
 render();

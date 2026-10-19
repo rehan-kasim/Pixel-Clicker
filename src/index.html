@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coffee Clicker</title>
+    <script>
+        const saved = localStorage.getItem("CoffeeData");
+        if (saved === null || JSON.parse(saved).intro !== true) {
+            location.replace("intro.html");
+        }
+    </script>
     <link rel="stylesheet" href="output.css">
 </head>
 <body class="bg-amber-100 dark:bg-amber-950">
