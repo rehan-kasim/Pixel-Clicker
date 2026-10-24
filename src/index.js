@@ -54,7 +54,7 @@ function upgradechecker(btn, price) {
 }
 
 function updateUpgrades() {
-    upgradechecker(upgradeClick1,0);
+    upgradechecker(upgradeClick1,10);
     upgradechecker(upgradeClick5, 50);
     upgradechecker(upgradeClick50, 1000);
     upgradechecker(upgradeSec100, 1000);
@@ -124,7 +124,7 @@ document.addEventListener("visibilitychange", function () {
 });
 
 upgradeClick1.onclick = function () {
-    upgradebuy(0, 1000000, 0);
+    upgradebuy(0, 1, 0);
 };
 upgradeClick5.onclick = function () {
     upgradebuy(50, 5, 0);
@@ -151,9 +151,9 @@ clicker.onclick = function (e) {
     if (coffee == 404){
     alert(`404 Coffee Not Found This is Just a easter egg`);
     };
-    if (coffee >= 100000000) {
+    if (coffee >= 1000000000000000) {
         alert("You Won! And Now As A reward You Get Admin Dash Which Is NOT completed :)");
-        coffee = 100000000;
+        coffee = 1000000000000000;
     }
     save();
     render();
