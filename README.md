@@ -23,7 +23,7 @@ A simple coffee clicker game i made for the browser. Click the cup, buy upgrades
 </details>
 
 ### Screenshots
-![Coffee Clicker gameplay](screenshots/game.png)
+![Coffee Clicker gameplay](https://user-cdn.hackclub-assets.com/01a17d7f-8827-745b-8de0-c64b07e58c2c/img.webp)
 
 ## Getting Started
 
