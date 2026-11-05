@@ -43,6 +43,7 @@ cd Pixel-Clicker
 
 * Open `src/index.html` with VS Code Live Server
 * To rebuild the styles:
+* Or open this link ```https://pixel-clicker-src.vercel.app```
 
 ```
 npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch
